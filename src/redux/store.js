@@ -4,6 +4,6 @@ import typingSlice from "./typingSlice";
 
 export const store = configureStore({
   reducer: {
-    text: typingSlice,
+    typing: typingSlice,
   },
 });
