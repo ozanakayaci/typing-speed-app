@@ -6,7 +6,7 @@ import ResultCard from "./resultCard/ResultCard.js";
 function Game() {
   return (
     <div>
-      <div>Game</div>
+      <h1 className="text-3xl font-bold underline">Game</h1>
       <Input />
       <ResultCard />
     </div>
