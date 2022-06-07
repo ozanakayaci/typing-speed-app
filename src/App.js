@@ -6,7 +6,7 @@ import Game from "./components/game/Game.js";
 
 const App = () => {
   return (
-    <div>
+    <div className="flex  items-center flex-col my-8">
       <Game />
     </div>
   );
