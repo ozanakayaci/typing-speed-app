@@ -35,7 +35,7 @@ export const typingSlice = createSlice({
     },
     setWords: (state, action) => {
       state.words = [];
-      let newWords = randomWords({ exactly: 250 });
+      let newWords = randomWords({ exactly: 252 });
       for (let i = 0; i < newWords.length; i++) {
         if (newWords[i].length > 2 && newWords[i].length < 10) {
           state.words.push({ word: newWords[i], correct: "" });

@@ -26,12 +26,14 @@ function TextArea() {
   };
 
   return (
-    <div className="max-h-24  overflow-hidden  max-w-xl text-2xl mb-5 border-2 rounded border-cyan-600 p-4 pt-0">
-      <div className="relative" style={style}>
+    <div className="max-h-24  overflow-hidden  max-w-xl text-xl	 mb-5 border-2 rounded border-cyan-600 p-4 pt-0">
+      <div
+        className="relative grid grid-cols-6 justify-items-center"
+        style={style}
+      >
         {words.map((item, i) => {
           return (
             <>
-              {i % 6 === 0 && i != 0 ? <br></br> : <></>}
               <span
                 className={`${
                   wrongCounter + correctCounter == i ? "bg-slate-300" : ""
