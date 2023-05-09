@@ -32,14 +32,17 @@ function Input() {
       const countDown = setInterval(() => setTimer(timer - 1), 1000);
       return () => clearInterval(countDown);
     } else if (timer === 0) {
-      dispatch(endGame());
-      setWord("");
-      setCounter(0);
-      setTempWord(0);
-      setGameFinish(true);
+      restartGame();
     }
   }, [timer]);
 
+  const restartGame = () => {
+    dispatch(endGame());
+    setWord("");
+    setCounter(0);
+    setTempWord(0);
+    setGameFinish(true);
+  };
   const handleChange = (e) => {
     if (e.target.value[e.target.value.length - 1] === " ") {
       setCounter(counter + 1);
@@ -89,6 +92,7 @@ function Input() {
       </div>
       <button
         onClick={() => {
+          restartGame();
           setGameFinish(false);
           dispatch(setWords());
         }}
