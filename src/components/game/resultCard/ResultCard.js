@@ -9,14 +9,14 @@ function ResultCard() {
   const keyStrokes = useSelector((state) => state.typing.keyStrokes);
 
   return (
-    <div className="border-2 border-cyan-600 mt-10 p-5">
+    <div className="border-2 rounded-xl border-cyan-600 mt-10 p-5">
       Result
       <div>{keyStrokes.correctKey / 5} WPM</div>
       <div>
-        Keystrokes:(
-        <span className="text-green-600">{keyStrokes.correctKey}</span>|
-        <span className="text-red-600">{keyStrokes.wrongKey}</span>)
-        <span>{keyStrokes.correctKey + keyStrokes.wrongKey}</span>
+        Keystrokes: (
+        <span className="text-green-600"> {keyStrokes.correctKey} </span>|
+        <span className="text-red-600"> {keyStrokes.wrongKey} </span>)
+        <span> {keyStrokes.correctKey + keyStrokes.wrongKey}</span>
       </div>
       <div>
         Correct Words: <span className="text-green-600">{correctCounter}</span>

@@ -13,7 +13,7 @@ function TextArea() {
 
   useEffect(() => {
     if ((wrongCounter + correctCounter) % 6 === 0 && gameStarted) {
-      setTop(top + 32);
+      setTop(top + 36);
     }
   }, [correctCounter, wrongCounter]);
 
@@ -26,7 +26,7 @@ function TextArea() {
   };
 
   return (
-    <div className="max-h-24  overflow-hidden  max-w-xl text-xl	 mb-5 border-2 rounded border-cyan-600 p-4 pt-0">
+    <div className="max-h-24 overflow-hidden max-w-xl text-xl mb-5 border-2 rounded-xl border-cyan-600 p-4 pt-0">
       <div
         className="relative grid grid-cols-6 justify-items-center"
         style={style}
@@ -37,7 +37,7 @@ function TextArea() {
               <span
                 className={`${
                   wrongCounter + correctCounter == i ? "bg-slate-300" : ""
-                } color-blue   ${
+                } color-blue p-1 ${
                   item.correct === ""
                     ? "word"
                     : item.correct
