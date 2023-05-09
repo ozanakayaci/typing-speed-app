@@ -83,7 +83,11 @@ function Input() {
         disabled={gameFinish ? true : false}
         value={word}
         onChange={handleChange}
-        className="p-2 border-2 rounded-l-lg border-indigo-300 hover:border-indigo-400 focus:outline-indigo-500"
+        className={`p-2 border-2 rounded-l-lg ${
+          !gameFinish
+            ? "border-cyan-600 hover:border-cyan-600 focus:border-cyan-600"
+            : "border-indigo-300 hover:border-indigo-400 focus:outline-indigo-500"
+        }`}
         type="text"
       />
       <div className="p-2 border-2  border-l-0   border-indigo-300 hover:border-indigo-400">
