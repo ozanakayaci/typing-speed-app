@@ -72,7 +72,6 @@ function Input() {
         dispatch(wordClass(["", counter]));
         setTempWord(e.target.value);
         dispatch(keyStrokesCounter("correctKey"));
-        console.log(e);
       } else setTempWord(e.target.value);
       setWord(e.target.value);
     }
